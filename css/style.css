@@ -1,0 +1,100 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --mainColor: #75b4e3;
+  --accentColor: #8fe0ff;
+  --sunColor: #ffcc33;
+  --cloudsColor: #c7c4bf;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--accentColor);
+}
+.container {
+  padding: 30px;
+  background-color: #fafafa;
+  border-radius: 10px;
+}
+
+form input,
+form input:focus {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  margin: 0 10px;
+  width: 300px;
+  text-align: center;
+}
+.search {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 32px;
+  color: #8fe0ffa3;
+  transition: all 0.3s ease;
+}
+.search:hover {
+  color: var(--accentColor);
+  transform: scale(1.5) rotate(-20deg);
+}
+.forecast {
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  margin: 20px auto;
+  justify-items: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+}
+
+.forecast .weather-icon i {
+  font-size: 80px;
+  color: var(--sunColor);
+}
+.forecast .temperature {
+  text-align: center;
+}
+.forecast .temperature .main-temp {
+  font-size: 80px;
+}
+.forecast .temperature .min,
+.forecast .temperature .max {
+  color: #999;
+}
+.convertion {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.convertion button {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 32px;
+  color: #999;
+  transition: all 0.3s ease;
+}
+.convertion button:hover {
+  color: #121212;
+}
+.convertion .separ {
+  font-size: 32px;
+}
+.info p {
+  color: #121212;
+  font-size: 18px;
+  text-align: center;
+}
